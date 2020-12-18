@@ -10,19 +10,25 @@ export default function reducer(state=initialState, action) {
   
   switch(type) {
     case 'CHANGECATEGORY':
-      return state
-      case 'GETCATEGORIES':
-      console.log('payload', payload)
-      return state
+      let newState = {...state,
+        activeCategory: payload
+      }
+      return newState 
+    case 'GETCATEGORIES':
+      // console.log('payload', payload)
+        return {...state,
+        categories: payload,
+        activeCategory: payload[0]
+      }
     default:
       return state
   }
 }
 
-export const changeCategory = (payload) => {
+export const changeCategory = (category) => {
   return {
     type: 'CHANGECATEGORY',
-    payload: 'payload'
+    payload: category
   }
 }
 

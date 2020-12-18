@@ -1,7 +1,12 @@
 import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { makeStyles } from '@material-ui/core/styles';
+
+import {changeCategory} from '../../store/categories.js'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,11 +22,26 @@ const useStyles = makeStyles((theme) => ({
 export default function Categories() {
   const classes = useStyles();
 
+  const dispatch = useDispatch();
+  const categories = useSelector(state => state.categories.categories);
+  const activeCategory = useSelector(state => state.categories.activeCategory);
+  console.log('activeCategory', activeCategory)
+
+
+
+
   return (
+
     <div className={classes.root}>
       <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-        <Button>Electronics</Button>
-        <Button>Food</Button>
+        
+        {categories.map(category => {
+          return (
+        <Button onClick= {() => dispatch(changeCategory(category))}>{category.name}</Button>
+        )
+        })};
+        
+
       </ButtonGroup>
     </div>
   );
