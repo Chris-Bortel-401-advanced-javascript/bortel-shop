@@ -55,6 +55,7 @@ Redux Store:
   // Lists out all of the products in a given category
   s: products
   s: activeCategory
+  a: getProducts
   a: addToCart
   a: decrementInStockCount
 
