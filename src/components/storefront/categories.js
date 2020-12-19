@@ -24,11 +24,6 @@ export default function Categories() {
 
   const dispatch = useDispatch();
   const categories = useSelector(state => state.categories.categories);
-  const activeCategory = useSelector(state => state.categories.activeCategory);
-  console.log('activeCategory', activeCategory)
-
-
-
 
   return (
 
@@ -37,7 +32,7 @@ export default function Categories() {
         
         {categories.map(category => {
           return (
-        <Button onClick= {() => dispatch(changeCategory(category))}>{category.name}</Button>
+        <Button key={category._id} onClick= {() => dispatch(changeCategory(category))}>{category.name}</Button>
         )
         })};
         

@@ -9,6 +9,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+
 
 // import {changeCategory} from '../../store/categories.js'
 
@@ -26,14 +29,21 @@ function Products() {
 
   // const dispatch = useDispatch();
   const products = useSelector(state => state.products.products)
-  // const activeCategory = useSelector(state => state.categories.activeCategory)
-  console.log('products products.js: ', products)
-  return (
-    <>
+  const activeCategory = useSelector(state => state.categories.activeCategory)
 
-    {products.map(product => {
+  let filtered = products.filter(product => product.category === activeCategory.name )
+  console.log('filtered', filtered)
+  return (
+  <>
+
+  <Container maxWidth="md" component="main">
+  <Grid container spacing={5} alignItems="stretch">
+
+
+    {filtered.map(product => {
       return (
 
+      <Grid item xs={12} sm={6} md={4} key={product._id}>
         <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -58,12 +68,26 @@ function Products() {
             View Details
           </Button>
         </CardActions>
-      </Card>
+        </Card>
+      </Grid>
       );
     })
     }
+
+
+  </Grid>
+  </Container>
   </>
   )
 }
 
 export default Products;
+
+  
+
+
+  
+
+
+
+
