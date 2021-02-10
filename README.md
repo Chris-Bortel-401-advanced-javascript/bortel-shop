@@ -1,4 +1,5 @@
 # Store Rebuild
+## Pull Request
 
 ## Pseudo Code
 
@@ -20,6 +21,8 @@ Redux Store:
  - Products:
   - s: Products
   - a: getProducts
+
+  
   - a: decrementInStockCount
   - a: reShelfStockCount
 

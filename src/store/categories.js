@@ -35,7 +35,7 @@ export const changeCategory = (category) => {
 export const getCategories = () => async dispatch => {
   let categories = await axios({
     method: 'GET',
-    url: 'https://davee-auth-api-server.herokuapp.com/api/v1/categories'
+    url: 'https://auth-server-cb.herokuapp.com/api/v1/categories'
   });
   dispatch({
     type: 'GETCATEGORIES',

@@ -9,30 +9,33 @@ export default function reducer(state=initialState, action) {
   
   switch(type) {
     case 'GETPRODUCTS':
-      console.log('payload', payload)
       return {...state,
         products: payload
       }
-    case 'DECREMENTINSTOCKCOUNT':
-      return state
-    case 'RESHELFSTOCKCOUNT':
-      return state
-    default:
-      return state
-  }
+      // Reducer that reduces the # in stock when that action is dispatched
+      case 'DECREMENTINSTOCKCOUNT':
+        return state
+        case 'RESHELFSTOCKCOUNT':
+          return state
+          default:
+            return state
+          }
+        }
+        
+        export const getProducts = () => async dispatch => {
+          let products = await axios({
+            method: 'GET',
+            url: 'https://auth-server-cb.herokuapp.com/api/v1/products'
+          }); 
+          dispatch ({
+            type: 'GETPRODUCTS',
+            payload: products.data.results
+          })
+          console.log('products===+', products)
 }
 
-export const getProducts = () => async dispatch => {
-  let products = await axios({
-    method: 'GET',
-    url: 'https://davee-auth-api-server.herokuapp.com/api/v1/products'
-  }); 
-  dispatch ({
-    type: 'GETPRODUCTS',
-    payload: products.data.results
-  })
-}
 
+// Action that will trigger the reducer to reduce the stock counter
 export const decrementInStockCount = () => {
   return {
     type: 'DECREMENTINSTOCKCOUNT',

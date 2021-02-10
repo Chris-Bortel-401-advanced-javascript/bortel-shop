@@ -29,6 +29,7 @@ function Products() {
 
   // const dispatch = useDispatch();
   const products = useSelector(state => state.products.products)
+  console.log('Products +=====', products)
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
