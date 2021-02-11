@@ -1,5 +1,6 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
+// import {useDispatch, useSelector} from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -29,11 +30,10 @@ function Products() {
 
   // const dispatch = useDispatch();
   const products = useSelector(state => state.products.products)
-  console.log('Products +=====', products)
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
-  console.log('filtered', filtered)
+
   return (
   <>
 

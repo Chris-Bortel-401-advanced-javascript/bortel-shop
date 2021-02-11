@@ -1,7 +1,8 @@
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
+// import {useDispatch, useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -35,7 +36,6 @@ function CurrentCategory() {
   const classes = useStyles();
 
   const activeCategory = useSelector(state => state.categories.activeCategory)
-  console.log('activeCategory', activeCategory)
 
   return(
 

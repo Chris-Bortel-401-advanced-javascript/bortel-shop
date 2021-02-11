@@ -22,16 +22,15 @@ export default function reducer(state=initialState, action) {
           }
         }
         
-        export const getProducts = () => async dispatch => {
-          let products = await axios({
-            method: 'GET',
-            url: 'https://auth-server-cb.herokuapp.com/api/v1/products'
-          }); 
-          dispatch ({
-            type: 'GETPRODUCTS',
-            payload: products.data.results
-          })
-          console.log('products===+', products)
+export const getProducts = () => async dispatch => {
+  let products = await axios({
+    method: 'GET',
+    url: 'https://auth-server-cb.herokuapp.com/api/v1/products'
+  }); 
+  dispatch ({
+    type: 'GETPRODUCTS',
+    payload: products.data.results
+  })
 }
 
 

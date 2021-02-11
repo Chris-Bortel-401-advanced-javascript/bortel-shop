@@ -25,7 +25,6 @@ export default function Categories() {
   const dispatch = useDispatch();
   const categories = useSelector(state => state.categories.categories);
 
-  console.log('Categories',categories)
   return (
 
     <div className={classes.root}>
