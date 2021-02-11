@@ -25,6 +25,7 @@ export default function reducer(state=initialState, action) {
 export const getProducts = () => async dispatch => {
   let products = await axios({
     method: 'GET',
+    // eslint-disable-next-line
     url: 'https://auth-server-cb.herokuapp.com/api/v1/products'
   }); 
   dispatch ({
@@ -41,6 +42,7 @@ export const decrementStock = (payload) => async dispatch => {
 
   await axios ({
     method: 'PUT',
+    // eslint-disable-next-line
     url: 'https://auth-server-cb.herokuapp.com/api/v1/products/${payload._id}',
     data: payload
   })
@@ -55,6 +57,7 @@ export const putStockBack = (payload) => async dispatch => {
 
   await axios ({
     method: 'PUT',
+    // eslint-disable-next-line
     url: 'https://auth-server-cb.herokuapp.com/api/v1/products/${newObj._id}',
     data: newObj
   })
