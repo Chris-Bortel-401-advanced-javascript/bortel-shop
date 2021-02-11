@@ -13,10 +13,10 @@ export default function reducer(state=initialState, action) {
         products: payload
       }
       // Reducer that reduces the # in stock when that action is dispatched
-      case 'DECREMENTINSTOCKCOUNT':
-        return state
-        case 'RESHELFSTOCKCOUNT':
-          return state
+      // case 'DECREMENTINSTOCKCOUNT':
+      //   return state
+      //   case 'RESHELFSTOCKCOUNT':
+      //     return state
           default:
             return state
           }
@@ -35,17 +35,30 @@ export const getProducts = () => async dispatch => {
 
 
 // Action that will trigger the reducer to reduce the stock counter
-export const decrementInStockCount = () => {
-  return {
-    type: 'DECREMENTINSTOCKCOUNT',
-    payload: 'payload'
-  }
+export const decrementStock = (payload) => async dispatch => {
+
+  payload.inStock = payload.inStock-=1;
+
+  await axios ({
+    method: 'PUT',
+    url: 'https://auth-server-cb.herokuapp.com/api/v1/products/${payload._id}',
+    data: payload
+  })
+
+  dispatch(getProducts());
 }
 
-export const reShelfStockCount = () => {
-  return {
-    type: 'RESHELFSTOCKCOUNT',
-    payload: 'payload'
-  }
+export const putStockBack = (payload) => async dispatch => {
+  let amount = payload.count;
+  let newObj = payload.obj;
+  newObj.inStock = newObj.inStock+amount;
+
+  await axios ({
+    method: 'PUT',
+    url: 'https://auth-server-cb.herokuapp.com/api/v1/products/${newObj._id}',
+    data: newObj
+  })
+
+  dispatch(getProducts());
 }
 
