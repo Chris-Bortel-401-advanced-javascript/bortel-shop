@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux';
 
 import Categories from './categories.js';
 import CurrentCategory from './current-category.js';
+import SimpleCart from '../cart/simple-cart.js';
 import Products from './products.js';
 
 import {getCategories} from '../../store/categories.js';
@@ -21,6 +22,7 @@ function StoreFront() {
 
   return (
     <>
+      <SimpleCart />
       <Categories />
       <CurrentCategory />
       <Products />

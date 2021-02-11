@@ -1,7 +1,6 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-// import {useDispatch, useSelector} from 'react-redux';
-
+import {useDispatch, useSelector} from 'react-redux';
+import {When} from 'react-if';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,7 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 
-
+import {addToCart} from '../../store/cart.js';
+import {decrementStock} from '../../store/products.js';
 // import {changeCategory} from '../../store/categories.js'
 
 const useStyles = makeStyles({
@@ -27,12 +27,20 @@ const useStyles = makeStyles({
 
 function Products() {
   const classes = useStyles();
-
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const products = useSelector(state => state.products.products)
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
+
+  const add = (product) => {
+    dispatch(addToCart(product));
+    dispatch(decrementStock(product));
+
+    // decrement one from product
+  }
+
+  console.log('products:', products);
 
   return (
   <>
@@ -62,7 +70,7 @@ function Products() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button onClick={() => add(product)} size="small" color="primary">
             Add To Cart
           </Button>
           <Button size="small" color="primary">
