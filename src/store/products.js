@@ -32,12 +32,13 @@ export const getProducts = () => async dispatch => {
     type: 'GETPRODUCTS',
     payload: products.data.results
   })
+  console.log('products from api: ' , products)
 }
 
 
 // Action that will trigger the reducer to reduce the stock counter
 export const decrementStock = (payload) => async dispatch => {
-
+console.log('payload in stock:', payload.inStock)
   payload.inStock = payload.inStock-=1;
 
   await axios ({
@@ -52,9 +53,10 @@ export const decrementStock = (payload) => async dispatch => {
 
 export const putStockBack = (payload) => async dispatch => {
   let amount = payload.count;
+  console.log('new amount: ', amount)
   let newObj = payload.obj;
   newObj.inStock = newObj.inStock+amount;
-
+  console.log('newObj: ', newObj.inStock )
   await axios ({
     method: 'PUT',
     // eslint-disable-next-line
