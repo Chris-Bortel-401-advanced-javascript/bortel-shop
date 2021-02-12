@@ -1,7 +1,8 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
+
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -42,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
 
 function Header() {
   const classes = useStyles();
+  const cart = useSelector( state => state.cart);
+  let cartLength = Object.values(cart).reduce((acc, obj) => {
+    return acc + obj.count;
+  },0);
   return(
     <>
       <AppBar position="static" color="primary" elevation={0} className={classes.appBar}>
@@ -52,7 +57,7 @@ function Header() {
           {/* These get pushed to the right, becuase the classes.toolbarTitle sets flexGrow to 1... */}
           
           <Button href="#" color="default" variant="outlined" className={classes.link}>
-            Cart
+            Cart({cartLength})
           </Button>
         </Toolbar>
       </AppBar>
