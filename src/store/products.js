@@ -40,7 +40,6 @@ export const getProducts = () => async dispatch => {
 
 // Action that will trigger the reducer to reduce the stock counter
 export const decrementStock = (payload) => async dispatch => {
-// TODO: The _id seems to be the issue with the server 500 error. I am recieving the stringValue: ""payload._id""
 console.log('payload in stock:', payload.inStock)
   payload.inStock = payload.inStock-=1;
 
@@ -54,6 +53,8 @@ console.log('payload in stock:', payload.inStock)
   dispatch(getProducts());
 }
 
+// TODO: When I add an item to the cart, the console is logging that I have one more of the item in my db than I actually do.  
+// started with 25010 added 9 macbooks to my cart and the console said that I had 25002 inStock when my Atlas said that I had the correct amount of 25001
 export const putStockBack = (payload) => async dispatch => {
   let amount = payload.count;
   console.log('new amount: ', amount)
@@ -61,7 +62,6 @@ export const putStockBack = (payload) => async dispatch => {
   console.log('newObj: ', newObj )
   newObj.inStock = newObj.inStock+amount;
   console.log('newObj inStock: ', newObj.inStock )
-  //TODO: This is causing the 500 error
   await axios ({
     method: 'PUT',
   
