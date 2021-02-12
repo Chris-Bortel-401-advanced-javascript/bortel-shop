@@ -70,9 +70,11 @@ function Products() {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button onClick={() => add(product)} size="small" color="primary">
-            Add To Cart
-          </Button>
+          <When condition={product.inStock > 0}>
+            <Button onClick={() => add(product)} size="small" color="primary">
+              Add To Cart
+            </Button>
+          </When>
           <Button size="small" color="primary">
             View Details
           </Button>

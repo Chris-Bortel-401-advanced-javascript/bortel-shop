@@ -54,9 +54,9 @@ function Header() {
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             Our Store
           </Typography>
-          {/* These get pushed to the right, becuase the classes.toolbarTitle sets flexGrow to 1... */}
+          {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
-          <Button href="#" color="default" variant="outlined" className={classes.link}>
+          <Button href="#" color="inherit" variant="outlined" className={classes.link}>
             Cart({cartLength})
           </Button>
         </Toolbar>

@@ -60,6 +60,7 @@ export const putStockBack = (payload) => async dispatch => {
   console.log('new amount: ', amount)
   let newObj = payload.obj;
   console.log('newObj: ', newObj )
+  // TODO: Need to add only one item for each click of the delete button
   newObj.inStock = newObj.inStock+amount;
   console.log('newObj inStock: ', newObj.inStock )
   await axios ({
