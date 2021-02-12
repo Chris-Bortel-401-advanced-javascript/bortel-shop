@@ -2,6 +2,7 @@
 
 ## [Deployed Site](https://60247cdb39dd2374796baac1--romantic-morse-5b215b.netlify.app/)
 ## Pull Request
+- [Lab 37 Combined Reducers](https://github.com/Chris-Bortel-401-advanced-javascript/storefront-rebuild/pull/3)
 
 ## Pseudo Code
 
