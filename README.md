@@ -1,4 +1,6 @@
 # Store Rebuild
+
+## [Deployed Site](https://60247cdb39dd2374796baac1--romantic-morse-5b215b.netlify.app/)
 ## Pull Request
 
 ## Pseudo Code
@@ -63,3 +65,17 @@ Redux Store:
   a: decrementInStockCount
 
 ```
+
+
+
+## TODO:
+```
+// Header.js and simpleCart.js --- 
+  - I want the simple cart to display only when I click on the cart button.
+  - TODO: Need to fix the decrement function in the simple cart. It is currently deleting everything for the specific item that you are wanting to remove quantity from. 
+
+// Products.js , need to check for the behavior of decrementing the stock in the frontend console opposed to the back. They should be the same.
+  - There is also an off by one error in the db every once and a while... Super bizarre
+  - When I click on the delete button, one number should decrement from the cart and one numer should increment to the inStock on the DB side.
+```
+

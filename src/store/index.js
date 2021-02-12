@@ -4,9 +4,10 @@ import ReduxThunk from 'redux-thunk';
 
 import categories from './categories.js'
 import products from './products.js'
+import cart from './cart.js'
 
 const reducer = combineReducers({
-  categories, products
+  categories, products, cart
 })
 
 const store = () => {
