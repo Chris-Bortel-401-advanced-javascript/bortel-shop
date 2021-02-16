@@ -8,6 +8,7 @@ const initialState = {
 export default function reducer(state=initialState, action) {
   const { type, payload } = action;
   
+  // TODO: REFACTOR
   switch(type) {
     case 'CHANGECATEGORY':
       let newState = {...state,
