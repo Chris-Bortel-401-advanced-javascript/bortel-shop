@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {When} from 'react-if';
 import { makeStyles } from '@material-ui/core/styles';
@@ -75,8 +76,11 @@ function Products() {
               Add To Cart
             </Button>
           </When>
+
           <Button size="small" color="primary">
-            View Details
+            <Link to='/productDetails'>
+              View Details
+            </Link>
           </Button>
         </CardActions>
         </Card>

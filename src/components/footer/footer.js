@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
@@ -51,12 +51,12 @@ function Footer() {
           {/* How do these 3 combine to make this a responsive grid? */}
           <Grid item xs={12} md={6} lg={3}>
             <Typography variant="h6" color="textPrimary" gutterBottom>
-              Column 1
+             <footer>&copy;Bortel Store 2021 </footer>
             </Typography>
-            <ul>
+            {/* <ul>
               <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 1</Link> </li>
               <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 2</Link> </li>
-            </ul>
+            </ul> */}
           </Grid>
         </Grid>
       </Container>
