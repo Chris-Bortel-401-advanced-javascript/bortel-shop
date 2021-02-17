@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -54,15 +54,20 @@ function Header() {
         <Toolbar className={classes.toolbar}>
   
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          <NavLink to='/'>
+
             <Button variant="contained" color="primary">
                 Our Store
             </Button>
+          </NavLink>
           </Typography>
           {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
+            <NavLink to='/cart'>
           <Button href="#" color="inherit" variant="outlined" className={classes.link}>
             Cart({cartLength})
           </Button>
+            </NavLink>
         </Toolbar>
       </AppBar>
       

@@ -83,3 +83,5 @@ Redux Store:
   - When I click on the delete button, one number should decrement from the cart and one numer should increment to the inStock on the DB side.
 ```
 
+
+TODO: Questions: should I be hitting my DB on load, or should I be waiting until the user hits the category link?
