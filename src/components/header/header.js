@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -51,8 +52,11 @@ function Header() {
     <>
       <AppBar position="static" color="primary" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
+  
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            Our Store
+            <Button variant="contained" color="primary">
+                Our Store
+            </Button>
           </Typography>
           {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
