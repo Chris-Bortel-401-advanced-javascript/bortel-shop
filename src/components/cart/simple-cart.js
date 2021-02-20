@@ -32,7 +32,6 @@ function SimpleCart() {
   const classes = useStyles();
   const dispatch = useDispatch();
   let cart = useSelector( state => state.cart);
-  console.log(cart)
   const destroy = (product) => {
     dispatch(deleteFromCart(product));
     dispatch(putStockBack(product));

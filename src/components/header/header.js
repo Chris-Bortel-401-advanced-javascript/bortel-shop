@@ -61,7 +61,7 @@ function Header() {
           {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
             <NavLink to='/cart' className={classes.link}>
-              Cart({cartLength})
+              Cart({cartLength}) 
             </NavLink>
         </Toolbar>
       </AppBar>

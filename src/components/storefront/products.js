@@ -41,7 +41,6 @@ function Products() {
     // decrement one from product
   }
 
-  console.log('products:', products);
 
   return (
   <>

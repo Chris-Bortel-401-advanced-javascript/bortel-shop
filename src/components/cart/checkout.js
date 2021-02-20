@@ -1,6 +1,8 @@
 // Hook up this component to the cart button
 
 import React from 'react';
+import {useSelector} from 'react-redux';
+
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
@@ -78,6 +80,11 @@ export default function ShoppingCart() {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
+
+  //TODO: Need to render this at the top of the page
+  const cart = useSelector( state => state.cart);
+console.log('cart at checkout',cart)
+
 
   return (
     <React.Fragment>
