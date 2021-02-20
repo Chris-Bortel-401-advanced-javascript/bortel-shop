@@ -27,6 +27,7 @@ export const getProducts = () => async dispatch => {
     type: 'GETPRODUCTS',
     payload: products.data.results
   })
+  console.log('products ::::::',products)
 }
 
 // Action that will trigger the reducer to reduce the stock counter

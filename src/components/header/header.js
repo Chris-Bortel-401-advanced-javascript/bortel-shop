@@ -33,12 +33,12 @@ const useStyles = makeStyles((theme) => ({
   fullHeight: {
     height: "100%"
   },
-  footer: {
-    borderTop: `1px solid ${theme.palette.divider}`,
-    marginTop: theme.spacing(8),
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
-  },
+  // footer: {
+  //   borderTop: `1px solid ${theme.palette.divider}`,
+  //   marginTop: theme.spacing(8),
+  //   paddingTop: theme.spacing(3),
+  //   paddingBottom: theme.spacing(3),
+  // },
 }));
 
 function Header() {
@@ -50,7 +50,7 @@ function Header() {
   return(
     <>
       
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
   
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
