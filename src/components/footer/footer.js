@@ -22,20 +22,16 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-  //  height: '100vh'
+    minHeight: '100vh',
   },
   main: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(2),
   },
-  
+
   // TODO: Get this to the bottom without all of that padding
   footer: {
- 
-
     padding: theme.spacing(3, 2),
-    flex: 1, 
-    // position: 'relative',
     marginTop: 'auto',
     backgroundColor:
       theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
