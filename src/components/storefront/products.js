@@ -17,6 +17,7 @@ import {addToCart} from '../../store/cart.js';
 import {decrementStock} from '../../store/products.js';
 // import {changeCategory} from '../../store/categories.js'
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -33,7 +34,7 @@ function Products() {
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
-
+ console.log(products);
   const add = (product) => {
     dispatch(addToCart(product));
     dispatch(decrementStock(product));
@@ -71,15 +72,17 @@ function Products() {
         </CardActionArea>
         <CardActions>
           <When condition={product.inStock > 0}>
+
+          {/* TODO:  */}
+
             <Button onClick={() => add(product)} size="small" color="primary">
               Add To Cart
             </Button>
           </When>
 
-          <Button size="small" color="primary">
-            <Link to='/productDetails'>
+          <Button size="small" color="primary" component={Link} to={`/product/${product._id}`}>
               View Details
-            </Link>
+            
           </Button>
         </CardActions>
         </Card>

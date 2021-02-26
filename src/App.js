@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 import store from './store/index.js'
 import StoreFront from './components/storefront/storefront.js';
-import ProductDetails from './components/products/details.js';
+import Product from './components/products/details.js';
 import ShoppingCart from './components/cart/checkout.js';
 import Header from './components/header/header.js';
 import Footer from './components/footer/footer.js';
@@ -21,7 +21,7 @@ function App() {
       <Header />
         <Switch>
           <Route exact path= '/' component={StoreFront}/>
-          <Route path= '/productDetails' component={ProductDetails}/>
+          <Route path= '/product/:id' component={Product}/>
           <Route path= '/cart' component={ShoppingCart}/>
           <StoreFront />
         </Switch>

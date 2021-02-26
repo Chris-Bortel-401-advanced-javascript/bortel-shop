@@ -89,7 +89,12 @@ console.log('cart at checkout',cart)
   return (
     <React.Fragment>
       <CssBaseline />
-
+      
+      {/* <ul>
+        {
+          cart.map(cart-list => <li></li>)
+        }
+      </ul> */}
       <main className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
