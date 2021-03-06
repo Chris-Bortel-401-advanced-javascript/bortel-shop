@@ -22,7 +22,18 @@ return (
     <ul>
       {
         // puts this into an arrau of the keys of the cart pbjectr
-        Object.keys(cart).map((key, i) => <li key={i}>{cart[key].obj.name}</li>)
+        Object.keys(cart).map((key, i) => 
+        <li key={i}>
+          {cart[key].obj.name}    
+          <br/>
+          Price: {cart[key].obj.price}
+          <br/>
+          Subtotal ({cart[key].count} items): {cart[key].obj.price}
+          <br/> 
+          Item Total: {cart[key].count * cart[key].obj.price} 
+          <br/>
+          <br/>
+        </li>)
       }
     </ul>
   total:{total}
