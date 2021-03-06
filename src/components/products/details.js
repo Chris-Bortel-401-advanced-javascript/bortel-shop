@@ -1,17 +1,15 @@
 import React from 'react'
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 export default function Product(props) {
   const products = useSelector(state => state.products.products)
-  console.log(products)
-  // filter or map the products to get the target product
-  // react browser router params from url
   const item = products.filter(item => props.match.params.id === item._id)
 
   const num = 8;
-function renderOptions(){
-  let options = [];
-  for(let i = 0; i <= num; i++){
+  
+  function renderOptions(){
+    let options = [];
+    for(let i = 0; i <= num; i++) {
     options.push(<option>{i}</option>)
   }
   return <select>{options}</select>

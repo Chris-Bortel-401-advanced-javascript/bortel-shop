@@ -1,42 +1,37 @@
-// Hook up this component to the cart button
-
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-
 export default function ShoppingCart() {
-
-
-  //TODO: Need to render this at the top of the page
   const cart = useSelector( state => state.cart);
-console.log('cart at checkout',cart)
-let total = 0;
+  let total = 0 
 
-Object.keys(cart).forEach((key) => {
-  total += cart[key].obj.price 
-} )
+  Object.keys(cart).forEach((key) => {total += cart[key].count * cart[key].obj.price})
 
-return (
-  <>
+  return (
+    <>
+    <h1>Checkout</h1>
+      <ul>
+        {
+          // puts this into an array of the keys of the cart object
+          Object.keys(cart).map((key, i) => {
+          const item = cart[key].obj;
+          const count = cart[key].count;
+          
+            return(
+            <li key={i}>
+              {item.name}    
+              <br/>
+              Price: ${item.price}
+              <br/>
+              Subtotal ({count} items): ${count * item.price}
+              <br/>
+              <br/>
+            </li>
+            )})
+        }
+      </ul>
 
-    <ul>
-      {
-        // puts this into an arrau of the keys of the cart pbjectr
-        Object.keys(cart).map((key, i) => 
-        <li key={i}>
-          {cart[key].obj.name}    
-          <br/>
-          Price: {cart[key].obj.price}
-          <br/>
-          Subtotal ({cart[key].count} items): {cart[key].obj.price}
-          <br/> 
-          Item Total: {cart[key].count * cart[key].obj.price} 
-          <br/>
-          <br/>
-        </li>)
-      }
-    </ul>
-  total:{total}
-  </>
+      Total: ${total.toFixed(2)}
+    </>
   );
-  }
+}
