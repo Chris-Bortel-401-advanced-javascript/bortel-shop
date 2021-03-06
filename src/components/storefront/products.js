@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {When} from 'react-if';
 import { makeStyles } from '@material-ui/core/styles';
@@ -32,7 +33,6 @@ function Products() {
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
-
   const add = (product) => {
     dispatch(addToCart(product));
     dispatch(decrementStock(product));
@@ -40,7 +40,6 @@ function Products() {
     // decrement one from product
   }
 
-  console.log('products:', products);
 
   return (
   <>
@@ -75,8 +74,10 @@ function Products() {
               Add To Cart
             </Button>
           </When>
-          <Button size="small" color="primary">
-            View Details
+
+          <Button size="small" color="primary" component={Link} to={`/product/${product._id}`}>
+              View Details
+            
           </Button>
         </CardActions>
         </Card>

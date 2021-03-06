@@ -31,7 +31,7 @@ export const getProducts = () => async dispatch => {
 
 // Action that will trigger the reducer to reduce the stock counter
 export const decrementStock = (payload) => async dispatch => {
-console.log('payload in stock:', payload.inStock)
+// console.log('payload in stock:', payload.inStock)
   payload.inStock = payload.inStock-=1;
 
   await axios ({

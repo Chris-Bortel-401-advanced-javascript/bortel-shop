@@ -1,8 +1,8 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -33,12 +33,12 @@ const useStyles = makeStyles((theme) => ({
   fullHeight: {
     height: "100%"
   },
-  footer: {
-    borderTop: `1px solid ${theme.palette.divider}`,
-    marginTop: theme.spacing(8),
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
-  },
+  // footer: {
+  //   borderTop: `1px solid ${theme.palette.divider}`,
+  //   marginTop: theme.spacing(8),
+  //   paddingTop: theme.spacing(3),
+  //   paddingBottom: theme.spacing(3),
+  // },
 }));
 
 function Header() {
@@ -49,16 +49,20 @@ function Header() {
   },0);
   return(
     <>
-      <AppBar position="static" color="primary" elevation={0} className={classes.appBar}>
+      
+      <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
+  
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-            Our Store
+          <NavLink to='/'>
+                Our Store
+          </NavLink>
           </Typography>
           {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
-          <Button href="#" color="inherit" variant="outlined" className={classes.link}>
-            Cart({cartLength})
-          </Button>
+            <NavLink to='/cart' className={classes.link}>
+              Cart({cartLength}) 
+            </NavLink>
         </Toolbar>
       </AppBar>
       
