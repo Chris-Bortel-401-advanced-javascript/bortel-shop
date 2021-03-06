@@ -34,8 +34,8 @@ function Products() {
   const activeCategory = useSelector(state => state.categories.activeCategory)
 
   let filtered = products.filter(product => product.category === activeCategory.name )
- console.log(products);
   const add = (product) => {
+     console.log(product);
     dispatch(addToCart(product));
     dispatch(decrementStock(product));
 
