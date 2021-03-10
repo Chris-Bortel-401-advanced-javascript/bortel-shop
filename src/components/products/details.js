@@ -1,6 +1,6 @@
 import React from 'react'
 import {useSelector} from 'react-redux';
-
+import SimpleCart from '../cart/simple-cart.js'
 export default function Product(props) {
   const products = useSelector(state => state.products.products)
   const item = products.filter(item => props.match.params.id === item._id)
@@ -27,6 +27,8 @@ export default function Product(props) {
   console.log(props.match.params)
   return (
     <div>
+          <SimpleCart />
+
       {renderOptions()}
       {renderDetails()}
     </div>
