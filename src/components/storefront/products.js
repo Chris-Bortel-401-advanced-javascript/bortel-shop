@@ -61,25 +61,26 @@ function Products() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {product.name}
+              {product.name} 
+              {/* {product.price} */}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            {/* <Typography variant="body2" color="textSecondary" component="p">
         {product.description}
-            </Typography>
+            </Typography> */}
           </CardContent>
         </CardActionArea>
+
         <CardActions>
           <When condition={product.inStock > 0}>
             <Button onClick={() => add(product)} size="small" color="primary">
               Add To Cart
             </Button>
           </When>
-
           <Button size="small" color="primary" component={Link} to={`/product/${product._id}`}>
               View Details
-            
           </Button>
         </CardActions>
+
         </Card>
       </Grid>
       );

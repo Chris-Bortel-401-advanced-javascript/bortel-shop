@@ -1,6 +1,6 @@
 # Store Rebuild
 
-## [Deployed Site](https://60247cdb39dd2374796baac1--romantic-morse-5b215b.netlify.app/)
+## [Deployed Site](https://6042dce319fc730007ca541e--romantic-morse-5b215b.netlify.app/)
 
 ## Pull Request
 - [Lab 37 Combined Reducers and Lab 38 async actions](https://github.com/Chris-Bortel-401-advanced-javascript/storefront-rebuild/pull/3)
