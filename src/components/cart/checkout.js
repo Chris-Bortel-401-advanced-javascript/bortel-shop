@@ -68,8 +68,7 @@ export default function ShoppingCart() {
           
           return(
             <ListItem className={classes.listItem} key={item._id}>
-                <ListItemText primary= {`${item.name} (Qty:  ${count})`} secondary={`Qty:  ${count}`}  />
-                {/* <ListItemText primary= {`${item.name} (Qty:  ${count})`} secondary={item.description} /> */}
+                <ListItemText primary= {item.name} secondary={`Qty:  ${count}`}  />
                 <Typography variant="body2">${item.price.toFixed(2)}</Typography>
               </ListItem>
           )})
