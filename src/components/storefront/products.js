@@ -20,6 +20,7 @@ import {decrementStock} from '../../store/products.js';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    height: 311,
   },
   media: {
     height: 140,
