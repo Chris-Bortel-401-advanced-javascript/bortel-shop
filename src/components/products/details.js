@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { When } from 'react-if';
 
@@ -142,7 +142,6 @@ export default function Product(props) {
           </Typography>
             </ExpansionPanelDetails>
           </ExpansionPanel>
-
 
           <ExpansionPanel className={classes.more} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
             <ExpansionPanelSummary
