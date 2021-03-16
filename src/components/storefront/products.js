@@ -63,9 +63,9 @@ function Products() {
             <Typography gutterBottom variant="h5" component="h2">
               {product.name}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            {/* <Typography variant="body2" color="textSecondary" component="p">
         {product.description}
-            </Typography>
+            </Typography> */}
           </CardContent>
         </CardActionArea>
         <CardActions>
