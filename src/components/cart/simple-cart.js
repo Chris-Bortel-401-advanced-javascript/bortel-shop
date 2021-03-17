@@ -23,8 +23,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    position: 'fixed',
+    right: 1
+    // backgroundColor: theme.palette.background.paper,
   },
+  secondary: {
+    fontSize:90
+  }
 }));
 
 function SimpleCart() {
@@ -46,7 +51,7 @@ function SimpleCart() {
         return (
           <ListItem key={product[0]} >
             <ListItemText primary={product[1].obj.name}  />
-            <ListItemText secondary={'QTY: ' + product[1].count}  />
+            <ListItemText secondary={'QTY: ' + product[1].count} className={classes.secondary} />
             <IconButton aria-label="delete" onClick={() => destroy(product[1])}>
               <DeleteIcon />
             </IconButton >

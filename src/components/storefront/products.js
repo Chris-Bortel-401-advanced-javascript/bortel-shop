@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {When} from 'react-if';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -15,16 +16,29 @@ import Container from '@material-ui/core/Container';
 
 import {addToCart} from '../../store/cart.js';
 import {decrementStock} from '../../store/products.js';
+
+import './product.scss';
 // import {changeCategory} from '../../store/categories.js'
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     height: 311,
+  
   },
   media: {
     height: 140,
   },
+  button: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignSelf: 'flex-end'
+  },
+  card: {
+    height: 140,
+   
+
+  }
 });
 
 function Products() {
@@ -72,16 +86,18 @@ function Products() {
         </CardActionArea>
 
         <CardActions>
+
+        <div className='card'>
           <When condition={product.inStock > 0}>
-            <Button onClick={() => add(product)} size="small" color="primary">
+            <Button className={classes.button} onClick={() => add(product)} size="small" color="primary">
               Add To Cart
             </Button>
           </When>
-          <Button size="small" color="primary" component={Link} to={`/product/${product._id}`}>
+          <Button size="small" color="primary" component={Link} to={`/product/${product._id}`} >
               View Details
           </Button>
+        </div>
         </CardActions>
-
         </Card>
       </Grid>
       );
