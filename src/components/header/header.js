@@ -9,20 +9,28 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
-    ul: {
-      margin: 0,
-      padding: 0,
-      listStyle: 'none',
+    
+    // ul: {
+      //   margin: 0,
+      //   padding: 0,
+      //   listStyle: 'none',
+      // },
+      
     },
-  },
-  appBar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  toolbarTitle: {
-    flex: 1,
-  },
-  link: {
-    margin: theme.spacing(1, 1.5),
+    appBar: {
+      borderBottom: `1px solid ${theme.palette.divider}`,
+    },
+    toolbarTitle: {
+      flex: 1,
+      // fontSize:30,
+      fontFamily: 'Merriweather, serif',
+      textDecoration: 'none',
+    },
+    link: {
+      margin: theme.spacing(1, 1.5),
+      textDecoration: 'none',
+      fontFamily: 'Merriweather, serif',
+      // fontSize: 20,
   },
   heroContent: {
     padding: theme.spacing(8, 0, 6),
@@ -33,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   fullHeight: {
     height: "100%"
   },
+
   // footer: {
   //   borderTop: `1px solid ${theme.palette.divider}`,
   //   marginTop: theme.spacing(8),
@@ -53,14 +62,14 @@ function Header() {
       <AppBar position="static" color="default" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
   
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-          <NavLink to='/'>
-                Our Store
+          <Typography variant="h4" color="inherit" noWrap className={classes.toolbarTitle}>
+          <NavLink to='/' className={classes.link}>
+                Bortel's Shop
           </NavLink>
           </Typography>
           {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
           
-            <NavLink to='/cart' className={classes.link}>
+            <NavLink to='/cart' className={classes.link} >
               Cart({cartLength}) 
             </NavLink>
         </Toolbar>
