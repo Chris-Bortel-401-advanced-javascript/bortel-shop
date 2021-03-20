@@ -1,4 +1,4 @@
-# Store Rebuild
+# Bortel's Shop
 
 ## [Deployed Site](https://6042dce319fc730007ca541e--romantic-morse-5b215b.netlify.app/)
 
