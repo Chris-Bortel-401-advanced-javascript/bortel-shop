@@ -53,7 +53,7 @@ export default function ShoppingCart() {
 
   return (
     <>
-    
+
       <div className={classes.layout}>
       <form>
         <Paper className={classes.paper}>
@@ -68,9 +68,9 @@ export default function ShoppingCart() {
           
           return(
             <ListItem className={classes.listItem} key={item._id}>
-                <ListItemText primary= {item.name} secondary={`Qty:  ${count}`}  />
-                <Typography variant="body2">${item.price.toFixed(2)}</Typography>
-              </ListItem>
+              <ListItemText primary= {item.name} secondary={`Qty:  ${count}`}  />
+              <Typography variant="body2">${item.price.toFixed(2)}</Typography>
+            </ListItem>
           )})
         }
             <ListItem className={classes.listItem}>
@@ -118,6 +118,7 @@ export default function ShoppingCart() {
         </Paper>
       </form>
     </div >
+    
     </>
   );
 }
