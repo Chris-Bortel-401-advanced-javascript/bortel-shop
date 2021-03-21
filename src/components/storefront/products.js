@@ -23,8 +23,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     height: 311,
-    position: 'relative'
-  
+    position: 'relative',
   },
   media: {
     height: 140,
@@ -95,7 +94,7 @@ function Products() {
             </Card>
           </Grid>
         );
-      })};
+      })}
       
     </Grid>
     </Container>
