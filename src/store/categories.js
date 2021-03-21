@@ -3,7 +3,7 @@ import axios from 'axios';
 const initialState = {
   categories: [],
   activeCategory: {}
-}
+};
 
 export default function reducer(state=initialState, action) {
   const { type, payload } = action;
@@ -27,7 +27,7 @@ export default function reducer(state=initialState, action) {
 export const changeCategory = (category) => {
   return {
     type: 'CHANGECATEGORY',
-    payload: category
+    payload: category,
   }
 }
 
@@ -35,9 +35,10 @@ export const getCategories = () => async dispatch => {
   let categories = await axios({
     method: 'GET',
     url: 'https://auth-server-cb.herokuapp.com/api/v1/categories'
-  });
+  })
+  
   dispatch({
     type: 'GETCATEGORIES',
-    payload: categories.data.results,
+    payload: categories.data.results
   })
 }

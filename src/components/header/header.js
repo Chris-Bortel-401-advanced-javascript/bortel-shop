@@ -9,12 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
-    
-    // ul: {
-      //   margin: 0,
-      //   padding: 0,
-      //   listStyle: 'none',
-      // },
+
       
     },
     appBar: {
@@ -42,12 +37,12 @@ const useStyles = makeStyles((theme) => ({
     height: "100%"
   },
 
-  // footer: {
-  //   borderTop: `1px solid ${theme.palette.divider}`,
-  //   marginTop: theme.spacing(8),
-  //   paddingTop: theme.spacing(3),
-  //   paddingBottom: theme.spacing(3),
-  // },
+  footer: {
+    borderTop: `1px solid ${theme.palette.divider}`,
+    marginTop: theme.spacing(8),
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+  },
 }));
 
 function Header() {
@@ -67,8 +62,6 @@ function Header() {
                 Bortel's Shop
           </NavLink>
           </Typography>
-          {/* These get pushed to the right, because the classes.toolbarTitle sets flexGrow to 1... */}
-          
             <NavLink to='/cart' className={classes.link} >
               Cart({cartLength}) 
             </NavLink>

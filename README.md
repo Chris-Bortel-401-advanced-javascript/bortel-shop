@@ -86,5 +86,17 @@ Redux Store:
 
 TODO: Questions: should I be hitting my DB on load, or should I be waiting until the user hits the category link?
 
+
+
+## TODOS: 
+- Simple cart: 
+  - delete button, only decrement by one.
+  - Need to make it a dropdown when the screen is minimized
+  - Set `QTY` to the right
+
+- Footer:
+  - Fix to the bottom
+
+  
 ## Citing
 - [Material UI checkout form](https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/checkout)

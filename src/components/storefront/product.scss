@@ -1,8 +1,9 @@
-.card {
+.card-buttons {
   margin-top: auto;
   display: flex;
-  align-items:flex-end;
-  // background-color: black;
-//  height: 20rem
-  
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 14px;  
 }

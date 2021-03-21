@@ -13,9 +13,9 @@ export default function reducer(state=initialState, action) {
             count: 1
           } 
         }
-        console.log('Added newState: ', newState)
         return newState;
-      } else {
+      } 
+      else {
         let newState = {
           ...state,
           [payload._id]: {
@@ -23,18 +23,13 @@ export default function reducer(state=initialState, action) {
             count: state[payload._id].count+=1
           }
         }
-
-        console.log(' ELSE newState: ', newState)
         return newState;
       }
-    
     case 'DELETEFROMCART':
       let newState = {...state}
       delete newState[payload.obj._id];
-
-      console.log('deleted from cart newState: ', newState)
       return newState;
-
+      
     default:
       return state
   }

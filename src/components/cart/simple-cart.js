@@ -1,10 +1,5 @@
-// Displays a short list (title only) of products in the cart
-// This should be present at all times
+// Displays a short list of products in the cart
 
-// When a user clicks the “add to cart” button add the item to their cart
-// In the <SimpleCart/> component, show a running list of the items in the cart (just the titles)
-// Change the (0) indicator in the header to show the actual number of items in the cart
-// Reduce the number in stock for that product
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -24,7 +19,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 360,
     position: 'fixed',
-    right: 1
+    right: 1,
+    marginTop: 10,
+  
     // backgroundColor: theme.palette.background.paper,
   },
   secondary: {

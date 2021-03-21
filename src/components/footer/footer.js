@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import Link from '@material-ui/core/Link';
+import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
@@ -9,9 +9,11 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      {/* <Link color="inherit" href="https://material-ui.com/"> */}
+
+      {/* TODO: Add link to my portfolio? */}
+      <Link color="inherit" href="#">
         Bortel Shop{' '}
-      {/* </Link>{' '} */}
+      </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -44,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   fullHeight: {
     height: "100%"
   },
+  // TODO: Push footer to the bottom
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,
     marginTop: theme.spacing(8),
@@ -61,13 +64,9 @@ function Footer() {
       <Container maxWidth="lg" component="footer" className={classes.footer}>
         <Grid container spacing={4} justify="space-around">
 
-          {/* How do these 3 combine to make this a responsive grid? */}
-          <Grid item xs={12} md={6} lg={3}>
+          <Grid item xs={12} md={6} lg={4}>
             <Copyright />
-            {/* <ul>
-              <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 1</Link> </li>
-              <li> <Link href="#" variant="subtitle1" color="textSecondary">Item 2</Link> </li>
-            </ul> */}
+    
           </Grid>
         </Grid>
       </Container>

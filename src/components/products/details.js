@@ -166,15 +166,4 @@ export default function Product(props) {
 
   );
 
-}
-
-
-// const num = 8;
-  
-// function renderOptions(){
-//   let options = [];
-//   for(let i = 0; i <= num; i++) {
-//   options.push(<option>{i}</option>)
-// }
-// return <select>{options}</select>
-// }
+};
