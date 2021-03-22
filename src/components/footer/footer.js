@@ -12,7 +12,8 @@ function Copyright() {
 
       {/* TODO: Add link to my portfolio? */}
       <Link color="inherit" href="#">
-        Bortel Shop{' '}
+        <b>Bortel's  Shop</b>
+        
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

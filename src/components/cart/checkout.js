@@ -63,7 +63,7 @@ export default function ShoppingCart() {
             Order summary
           </Typography>
           <Typography variant="h6" gutterBottom>
-          NOT CURRENTLY PROCESSING ORDERS
+          NOT PROCESSING ORDERS - <i>Input Disabled</i>
           </Typography>
           <List disablePadding>
           {
@@ -91,18 +91,18 @@ export default function ShoppingCart() {
               <Typography variant="h6" gutterBottom className={classes.title}>
                 Billing Address
               </Typography>
-              <TextField id="name" name="name" label="Full Name" />
-              <TextField id="address" name="address" label="Address" />
-              <TextField id="city" name="city" label="City" />
-              <TextField id="state" name="state" label="State" />
-              <TextField id="zip" name="zip" label="zip" />
+              <TextField id="name" name="name" label="Full Name" disabled />
+              <TextField id="address" name="address" label="Address" disabled />
+              <TextField id="city" name="city" label="City" disabled />
+              <TextField id="state" name="state" label="State" disabled />
+              <TextField id="zip" name="zip" label="zip" disabled />
             </Grid>
 
             <Grid item xs={12} sm={6}>
               <Typography variant="h6" gutterBottom className={classes.title}>
                 Payment details
               </Typography>
-              <TextField id="cc_number" name="cc_number" label="Credit Card #" />
+              <TextField id="cc_number" name="cc_number" label="Credit Card #" disabled />
               <TextField
                 id="date"
                 label="Expiration"
@@ -110,8 +110,9 @@ export default function ShoppingCart() {
                 InputLabelProps={{
                   shrink: true,
                 }}
+                disabled
               />
-              <TextField id="cvv" name="cvv" label="CVV" />
+              <TextField id="cvv" name="cvv" label="CVV" disabled />
             </Grid>
           </Grid>
 
