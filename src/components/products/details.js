@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import SimpleCart from '../cart/simple-cart.js'
+import SimpleCart from '../cart/simple-cart.js';
 import {decrementStock} from '../../store/products.js';
 import {addToCart} from '../../store/cart.js';
 
