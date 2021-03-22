@@ -21,8 +21,8 @@ import './product.scss';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
-    height: 311,
+    maxWidth: 320,
+    height: 330,
     position: 'relative',
   },
   media: {
