@@ -1,4 +1,6 @@
-## Changes that need to made
+## Continuing this project
+
+#### [Main README](./README.md)
 
 ### `<Authentication/>`
 ### `<StoreFront/>`
@@ -17,6 +19,11 @@
 - Style Buttons Set lefts and space out
 - Add descriptions
 - Adjust The product name header *(both size and format)*
+
+### `<SimpleCart/>`
+- Delete button, only decrement by one.
+- Need to make it a dropdown when the screen is minimized
+- Set `QTY` to the right
 
 ### `<Checkout/>
 ### `<Header/>`
