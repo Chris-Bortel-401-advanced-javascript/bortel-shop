@@ -11,6 +11,8 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
+import SimpleCart from '../cart/simple-cart.js';
+
 const useStyles = makeStyles((theme) => ({
   listItem: {
     padding: theme.spacing(1, 0),
@@ -53,12 +55,15 @@ export default function ShoppingCart() {
 
   return (
     <>
-
+      <SimpleCart/>
       <div className={classes.layout}>
       <form>
         <Paper className={classes.paper}>
-          <Typography variant="h6" gutterBottom>
+          <Typography variant="h4" gutterBottom>
             Order summary
+          </Typography>
+          <Typography variant="h6" gutterBottom>
+          NOT CURRENTLY PROCESSING ORDERS
           </Typography>
           <List disablePadding>
           {
