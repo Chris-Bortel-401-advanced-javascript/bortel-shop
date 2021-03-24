@@ -1,4 +1,4 @@
-# Bortel's Shop 
+# Bortel's Shop - frontend
 
 ### Author: Chris Bortel
 
@@ -22,3 +22,6 @@ Add updated deployed site, make this a personalized url
 
 ## Citing
 operation 
+
+## Note
+Combining with access control
