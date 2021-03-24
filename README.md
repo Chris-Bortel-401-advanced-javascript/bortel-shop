@@ -1,9 +1,13 @@
-# Bortel's Shop
+# Bortel's Shop 
+
+### Author: Chris Bortel
 
 ## [Deployed Site](https://www.bortel-shop.com)
 ## [Backend Server](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control)
-#### [Redux planning](./reduxPlanning.md)
-#### [Continuing this project](./TODOs.md)
+
+## Planning documentation
+- [Redux planning](./reduxPlanning.md)
+- [Continuing this project](./TODOs.md)
 
 <!-- ```
 Technologies used
@@ -17,4 +21,4 @@ Add updated deployed site, make this a personalized url
 ## Installation
 
 ## Citing
-- [Material UI checkout form](https://github.com/mui-org/material-ui/tree/master/docs/src/pages/getting-started/templates/checkout)
+operation 
