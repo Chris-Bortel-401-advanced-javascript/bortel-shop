@@ -3,7 +3,7 @@
 ### Author: Chris Bortel
 
 ## [Deployed Site](https://www.bortel-shop.com)
-## [Backend Server](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control)
+This web client relies on the [Bortel Mercantile](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control) API.
 
 ## Planning documentation
 - [Redux planning](./reduxPlanning.md)
