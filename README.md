@@ -1,24 +1,27 @@
-# Bortel's Shop 
+# Bortel Shop - client
+Author: Chris Bortel
 
-### Author: Chris Bortel
+This web client relies on the [Bortel Shop](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control) API.
 
-## [Deployed Site](https://www.bortel-shop.com)
-This web client relies on the [Bortel Mercantile](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control) API.
+### Deployments 
+- [Bortel-Shop](https://www.bortel-shop.com) - Client
+- [Bortel-Shop](https://auth-server-cb.herokuapp.com) - API
 
 ## Planning documentation
 - [Redux planning](./reduxPlanning.md)
 - [Continuing this project](./TODOs.md)
 
-<!-- ```
-Technologies used
+### Technologies used
+JavaScript, React, Redux, Redux Thunk, SCSS, Material-UI, CSS Grid, Flexbox, Node.js, Axios
 
-Description of the project
 
-Add updated deployed site, make this a personalized url
-``` -->
-## [Deployed Site](https://6042dce319fc730007ca541e--romantic-morse-5b215b.netlify.app/)
+## Description of the project
 
-## Installation
+## Installation and development setup
+Clone to your local machine
+```
+git clone https://github.com/Chris-Bortel-401-advanced-javascript/bortel-shop.git
+```
 
 ## Citing
 operation 
