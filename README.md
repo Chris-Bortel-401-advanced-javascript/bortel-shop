@@ -4,6 +4,8 @@
 
 ### [Deployed Site](https://www.bortel-shop.com)
 
+*NOTE: Initial load may be slow due to host*
+
 ​A full-stack eCommerce application that includes a React front end and an authenticated Express [API server](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control).
 
 ### Technologies Used
