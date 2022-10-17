@@ -1,24 +1,14 @@
 # Bortel's Shop 
 
-### Author: Chris Bortel
+## Author: Chris Bortel
 
-## [Deployed Site](https://www.bortel-shop.com)
-This web client relies on the [Bortel Mercantile](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control) API.
+### [Deployed Site](https://www.bortel-shop.com)
 
-## Planning documentation
+​A full-stack eCommerce application that includes a React front end and an authenticated Express [API server](https://github.com/Chris-Bortel-401-advanced-javascript/auth-server-access-control).
+
+### Technologies Used
+​React, Redux, Redux Thunk, SCSS, Material-UI, CSS Grid, Flexbox, Node.js, Axios, Superagent, Jest, MongoDB, Mongoose, Base-64, Bcrypt, JWT. 
+
+### Planning Documentation
 - [Redux planning](./reduxPlanning.md)
 - [Continuing this project](./TODOs.md)
-
-<!-- ```
-Technologies used
-
-Description of the project
-
-Add updated deployed site, make this a personalized url
-``` -->
-## [Deployed Site](https://6042dce319fc730007ca541e--romantic-morse-5b215b.netlify.app/)
-
-## Installation
-
-## Citing
-operation 
