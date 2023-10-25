@@ -34,7 +34,7 @@ export const changeCategory = (category) => {
 export const getCategories = () => async dispatch => {
   let categories = await axios({
     method: 'GET',
-    url: 'https://auth-server-cb.herokuapp.com/api/v1/categories'
+    url: 'https://bortel-shop-api-e73b72cd02e8.herokuapp.com/api/v1/categories'
   })
   
   dispatch({
